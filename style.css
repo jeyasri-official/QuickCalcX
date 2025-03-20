@@ -173,7 +173,7 @@ p.end{
 
 @media (width <= 450px) {
     .container {
-        max-width: 300px
+        max-width: 350px
     }
     .container h2{
         font-size: 1.5rem;
