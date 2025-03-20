@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel Cost Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="navbar-container"></div>  
+    
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="container p-4 rounded ">
+            <h2 class="mb-4 text-center">Fuel Cost Calculator</h2>
+
+            <label class="form-label">Distance (km):</label>
+            <input type="number" id="distance" class="form-control" placeholder="Enter distance">
+
+            <label class="form-label mt-3">Fuel Efficiency (km/l):</label>
+            <input type="number" id="efficiency" class="form-control" placeholder="Enter fuel efficiency">
+
+            <label class="form-label mt-3">Fuel Price per Liter :</label>
+            <input type="number" id="fuelPrice" class="form-control" placeholder="Enter fuel price">
+
+            <button class="mt-4 w-100" id="click" onclick="calculateFuelCost()">Calculate</button>
+
+            <h4 class="mt-4 text-center" id="result">Total Cost : </h4>
+        </div>
+    </div>
+    <div id="footer-container"></div>
+    
+    <script src="./navbar.js"></script>
+    <script src="./footer.js"></script>
+    <script src="./fuel.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+:root {
+    --bg: #030113;
+    --cbg: rgb(222, 220, 230);
+    --primary: rgb(67, 84, 141);
+    --btn: #80769c;
+    --btnhover: darkslategray;
+}
+
+body {
+    background-color: var(--bg);
+    margin: 0;
+    padding: 0;
+    font-family: var(--roboto);
+    letter-spacing: 1px;
+}
+
+.box {
+    max-width: 400px; /* Prevents too large width */
+    background-color: var(--cbg);
+    max-width: 400px;
+    min-height: 70vh; 
+    padding-bottom: 40px;
+    margin-top: 20px;
+}
+
+/* Input Field */
+
+.calc-input {
+    width: 95%;
+    margin: auto;
+    color: var(--bg);
+    padding: 10px;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 5px;
+    text-align: right;
+}
+
+/* Custom Buttons */
+
+.calc-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--btn);
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+.equ{
+    background-color: var(--bg);
+}
+.calc-btn:hover {
+    background-color: var(--btnhover);
+}
+
+.container h2{
+    color:var(--primary);
+    font-size: 2.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
