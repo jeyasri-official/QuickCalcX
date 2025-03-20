@@ -173,7 +173,9 @@ p.end{
 
 @media (width <= 460px) {
     .container {
-        max-width: 400px
+        min-width: 400px;
+        margin-top: 0;
+        margin-bottom: 0;
     }
     .container h2{
         font-size: 1.5rem;
