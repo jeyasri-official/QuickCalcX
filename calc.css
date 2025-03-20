@@ -17,7 +17,7 @@ body {
 .box {
     max-width: 400px; /* Prevents too large width */
     background-color: var(--cbg);
-    min-height: 80vh; 
+    min-height: 70vh; 
     padding-bottom: 10px;
     margin-top: 20px;
 }
