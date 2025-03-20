@@ -14,19 +14,6 @@ body {
     padding: 0;
     font-family: var(--roboto);
 }
-:root {
-    --bg: #030113;
-    --cbg: rgb(222, 220, 230);
-    --btn: #80769c;
-    --roboto: "Roboto", sans-serif;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--roboto);
-    background-color: var(--bg);
-}
 
 /* Navbar */
 .navbar {
@@ -165,7 +152,7 @@ body {
     cursor: pointer;
 }
 
-/* ✅ Fix: Hide Extra Elements in Mobile */
+/* Fix: Hide Extra Elements in Mobile */
 @media (max-width: 800px) {
     /* Hide desktop menu */
     .nav-links {

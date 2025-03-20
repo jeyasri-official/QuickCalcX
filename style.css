@@ -162,12 +162,22 @@ p.end{
 .container{
     background-color: var(--cbg);
     border-radius: 10px;
-    max-width: 400px;
+    max-width: 500px;
 }
 
 .container h2{
     color:var(--primary);
     font-size: 2rem;
+}
+
+
+@media (width <= 450px) {
+    .container {
+        max-width: 300px
+    }
+    .container h2{
+        font-size: 1.5rem;
+    }
 }
 
 /* Fullscreen Menu Fixes */
@@ -225,15 +235,6 @@ body.menu-open {
 }
 
 
-@media (width <= 450px) {
-    .container {
-        max-width: 300px
-    }
-    .container h2{
-        font-size: 1.5rem;
-    }
-}
-
 @media (width <= 454px) {
     .home, .about, .contact{
         max-width: 350px
@@ -258,7 +259,6 @@ body.menu-open {
         font-size: 1.2rem;
     }
 }
-
 
 
 #click{
