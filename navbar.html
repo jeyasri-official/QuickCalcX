@@ -1,0 +1,60 @@
+<nav class="navbar d-flex justify-content-between align-items-center">
+    <div class="logo">QuickCalcX</div>
+    <ul class="nav-links d-flex gap-4 p-0 m-0">
+        <li><a href="index.html">Home</a></li>
+        
+        <li class="dropdown">
+            <a href="#">Converters ▾</a>
+            <ul class="dropdown-menu">
+                <li><a href="./len.html">Length Converter</a></li>
+                <li><a href="./wei.html">Weight Converter</a></li>
+                <li><a href="./speed.html">Speed Converter</a></li>
+                <li><a href="./temp.html">Temperature Converter</a></li>
+                <li><a href="./time.html">Time Converter</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="#">Calculators ▾</a>
+            <ul class="dropdown-menu">
+                <li><a href="./calc.html">Basic Calculator</a></li>
+                <li><a href="./bmi.html">BMI Calculator</a></li>
+                <li><a href="./age.html">Age Calculator</a></li>
+                <li><a href="./disc.html">Discount Calculator</a></li>
+                <li><a href="./fuel.html">Fuel Cost Calculator</a></li>
+            </ul>
+        </li>
+
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="menu-toggle" onclick="openMenu()">☰</div>
+    <div id="fullscreenMenu" class="fullscreen-menu">
+        <div class="close-btn" onclick="closeMenu()">✖</div>
+        <a href="index.html">Home</a>
+    
+        <a href="#" onclick="toggleDropdown('mobileConverters')">Converters ▾</a>
+        <div id="mobileConverters" class="mobile-dropdown">
+            <a href="./len.html">Length Converter</a>
+            <a href="./wei.html">Weight Converter</a>
+            <a href="./speed.html">Speed Converter</a>
+            <a href="./temp.html">Temperature Converter</a>
+            <a href="./time.html">Time Converter</a>
+        </div>
+    
+        <a href="#" onclick="toggleDropdown('mobileCalculators')">Calculators ▾</a>
+        <div id="mobileCalculators" class="mobile-dropdown">
+            <a href="./calc.html">Basic Calculator</a>
+            <a href="./bmi.html">BMI Calculator</a>
+            <a href="./age.html">Age Calculator</a>
+            <a href="./disc.html">Discount Calculator</a>
+            <a href="./fuel.html">Fuel Cost Calculator</a>
+        </div>
+    
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    
+</nav>
+<script src="navbar.js"> </script>
