@@ -14,7 +14,7 @@ function toggleDropdown(id) {
     dropdown.classList.toggle("show");
 }
 
-fetch("navbar.html")  
+fetch("./navbar.html")  
     .then(response => response.text())
     .then(data => {
         document.getElementById("navbar-container").innerHTML = data;
