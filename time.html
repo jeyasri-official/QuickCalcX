@@ -11,15 +11,15 @@
 <body>
     <div id="navbar-container"></div>  
     
-    <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="d-flex justify-content-center align-items-center vh-100 mt-5 mb-5 ">
         <div class="container p-4 rounded shadow">
-            <h2 class="text-center mb-4">Time Converter</h2>
+            <h2 class="text-center mb-4 p-2">Time Converter</h2>
 
-            <label for="timeInput" class="form-label">Enter Time:</label>
-            <input type="number" id="timeInput" class="form-control" placeholder="Enter value" required>
+            <label for="timeInput" class="form-labe fs-5">Enter Time:</label>
+            <input type="number" id="timeInput" class="form-control p-2 mt-2 fs-5"  placeholder="Enter value" required>
 
-            <label for="fromUnit" class="form-label mt-3">From:</label>
-            <select id="fromUnit" class="form-select">
+            <label for="fromUnit" class="form-label mt-3 fs-5">From:</label>
+            <select id="fromUnit" class="form-select mt-2 p-2 fs-5">
                 <option value="seconds">Seconds</option>
                 <option value="minutes">Minutes</option>
                 <option value="hours">Hours</option>
@@ -27,8 +27,8 @@
                 <option value="weeks">Weeks</option>
             </select>
 
-            <label for="toUnit" class="form-label mt-3">To:</label>
-            <select id="toUnit" class="form-select">
+            <label for="toUnit" class="form-label mt-3 fs-5">To:</label>
+            <select id="toUnit" class="form-select mt-2 p-2 fs-5">
                 <option value="seconds">Seconds</option>
                 <option value="minutes">Minutes</option>
                 <option value="hours">Hours</option>
@@ -36,9 +36,9 @@
                 <option value="weeks">Weeks</option>
             </select>
 
-            <button id="click" onclick="convertTime()" class="w-100 mt-4">Convert</button>
+            <button id="click" onclick="convertTime()" class="w-100 mt-5">Convert</button>
 
-            <h4 class="text-center mt-4" id="result">Result: </h4>
+            <h4 class="text-center mt-4 p-2" id="result">Result: </h4>
         </div>
     </div>
 

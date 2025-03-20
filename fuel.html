@@ -11,22 +11,22 @@
 <body>
     <div id="navbar-container"></div>  
     
-    <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="d-flex justify-content-center align-items-center vh-100 mt-5 mb-5 ">
         <div class="container p-4 rounded ">
-            <h2 class="mb-4 text-center">Fuel Cost Calculator</h2>
+            <h2 class="mb-4 text-center p-2">Fuel Cost Calculator</h2>
 
-            <label class="form-label">Distance (km):</label>
-            <input type="number" id="distance" class="form-control" placeholder="Enter distance">
+            <label class="form-label fs-5">Distance (km):</label>
+            <input type="number" id="distance" class="form-control p-2 mt-2 fs-5" placeholder="Enter distance">
 
-            <label class="form-label mt-3">Fuel Efficiency (km/l):</label>
-            <input type="number" id="efficiency" class="form-control" placeholder="Enter fuel efficiency">
+            <label class="form-label fs-5 mt-3">Fuel Efficiency (km/l):</label>
+            <input type="number" id="efficiency" class="form-control p-2 mt-2 fs-5" placeholder="Enter fuel efficiency">
 
-            <label class="form-label mt-3">Fuel Price per Liter :</label>
-            <input type="number" id="fuelPrice" class="form-control" placeholder="Enter fuel price">
+            <label class="form-label fs-5 mt-3">Fuel Price per Liter :</label>
+            <input type="number" id="fuelPrice" class="form-control p-2 mt-2 fs-5" placeholder="Enter fuel price">
 
-            <button class="mt-4 w-100" id="click" onclick="calculateFuelCost()">Calculate</button>
+            <button class="mt-5 w-100 " id="click" onclick="calculateFuelCost()">Calculate</button>
 
-            <h4 class="mt-4 text-center" id="result">Total Cost : </h4>
+            <h4 class="mt-4 p-2 text-center" id="result">Total Cost : </h4>
         </div>
     </div>
     <div id="footer-container"></div>

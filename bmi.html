@@ -11,20 +11,20 @@
 <body>
     <div id="navbar-container"></div>  
     
-    <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="d-flex justify-content-center align-items-center vh-100 mt-5 mb-5 ">
         <div class="container p-4 rounded shadow">
-            <h2 class="text-center mb-4">BMI Calculator</h2>
+            <h2 class="text-center mb-4 p-2">BMI Calculator</h2>
 
-            <label for="weightInput" class="form-label">Enter Weight (kg):</label>
-            <input type="number" id="weightInput" class="form-control" placeholder="Weight in kg" required>
+            <label for="weightInput" class="form-label fs-5">Enter Weight (kg):</label>
+            <input type="number" id="weightInput" class="form-control p-2 mt-2 fs-5" placeholder="Weight in kg" required>
 
-            <label for="heightInput" class="form-label mt-3">Enter Height (cm):</label>
-            <input type="number" id="heightInput" class="form-control" placeholder="Height in cm" required>
+            <label for="heightInput" class="form-label mt-3 fs-5">Enter Height (cm):</label>
+            <input type="number" id="heightInput" class="form-control p-2 mt-2 fs-5" placeholder="Height in cm" required>
 
-            <button id="click" onclick="calculateBMI()" class="w-100 mt-4">Calculate BMI</button>
+            <button id="click" onclick="calculateBMI()" class="w-100 mt-5">Calculate BMI</button>
 
             <h4 class="text-center mt-4" id="result">Your BMI: </h4>
-            <h5 class="text-center mt-3" id="category"></h5>
+            <h5 class="text-center mt-4 " id="category"></h5>
         </div>
     </div>
     <div id="footer-container"></div>

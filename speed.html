@@ -11,15 +11,15 @@
 <body>
     <div id="navbar-container"></div>  
     
-    <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="d-flex justify-content-center align-items-center vh-100 mt-5 mb-5 ">
         <div class="container p-4 rounded shadow">
-            <h2 class="text-center mb-4">Speed Converter</h2>
+            <h2 class="text-center mb-4 p-2">Speed Converter</h2>
 
-            <label for="speedInput" class="form-label">Enter Speed:</label>
-            <input type="number" id="speedInput" class="form-control" placeholder="Enter value" required>
+            <label for="speedInput" class="form-label fs-5">Enter Speed:</label>
+            <input type="number" id="speedInput" class="form-control p-2 mt-2 fs-5"  placeholder="Enter value" required>
 
-            <label for="fromUnit" class="form-label mt-3">From:</label>
-            <select id="fromUnit" class="form-select">
+            <label for="fromUnit" class="form-label mt-3 fs-5">From:</label>
+            <select id="fromUnit" class="form-select mt-2 p-2 fs-5">
                 <option value="kmh">Kilometers per hour (km/h)</option>
                 <option value="mph">Miles per hour (mph)</option>
                 <option value="ms">Meters per second (m/s)</option>
@@ -27,8 +27,8 @@
                 <option value="fts">Feet per second (ft/s)</option>
             </select>
 
-            <label for="toUnit" class="form-label mt-3">To:</label>
-            <select id="toUnit" class="form-select">
+            <label for="toUnit" class="form-label mt-3 fs-5">To:</label>
+            <select id="toUnit" class="form-select mt-2 p-2 fs-5">
                 <option value="kmh">Kilometers per hour (km/h)</option>
                 <option value="mph">Miles per hour (mph)</option>
                 <option value="ms">Meters per second (m/s)</option>
@@ -36,9 +36,9 @@
                 <option value="fts">Feet per second (ft/s)</option>
             </select>
 
-            <button id="click" onclick="convertSpeed()" class="w-100 mt-4">Convert</button>
+            <button id="click" onclick="convertSpeed()" class="w-100 mt-5">Convert</button>
 
-            <h4 class="text-center mt-4" id="result">Result : </h4>
+            <h4 class="text-center mt-4 p-2" id="result">Result : </h4>
         </div>
     </div>
 
