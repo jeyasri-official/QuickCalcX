@@ -27,6 +27,20 @@ function convertLength() {
     // Convert meters to the target unit
     let result = inputInMeters * conversionRates[toUnit];
 
-    document.getElementById("result").innerText = ` ${input} ${fromUnit} - ${result.toFixed(2)} ${toUnit}`;
+    document.getElementById("result").innerText = ` ${input} ${fromUnit} = ${result.toFixed(2)} ${toUnit}`;
+
+    let userLenInput = `${input} ${fromUnit}`
+    let calculation =  `${result.toFixed(2)} ${toUnit}`;
+    saveToHistory(userLenInput, calculation);
+}
+
+function saveToHistory(calculation, result) {
+    let history = JSON.parse(localStorage.getItem("calcHistory")) || [];
+    let entry = `${calculation} = ${result}`;
+
+    history.unshift(entry); // Add latest entry at the beginning
+    if (history.length > 20) history.pop(); // Keep only last 20 entries
+
+    localStorage.setItem("calcHistory", JSON.stringify(history));
 }
 

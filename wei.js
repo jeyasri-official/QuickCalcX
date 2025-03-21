@@ -30,6 +30,11 @@ function convertWeight() {
     let convertedWeight = weightInKg / conversionFactors[toUnit];
 
     resultElement.innerHTML = `Result : ${convertedWeight.toFixed(2)} ${toUnit}`;
+
+    let userWeightInput = `${weightInput} ${fromUnit}`
+    let calculation = `${convertedWeight.toFixed(2)} ${toUnit}`
+    saveToHistory(userWeightInput,calculation);
+    
 }
 
 document.getElementById("weightInput").addEventListener("keydown", function(event) {
@@ -37,3 +42,14 @@ document.getElementById("weightInput").addEventListener("keydown", function(even
         convertWeight();
     }
 });
+
+
+function saveToHistory(calculation, result) {
+    let history = JSON.parse(localStorage.getItem("calcHistory")) || [];
+    let entry = `${calculation} = ${result}`;
+
+    history.unshift(entry); // Add latest entry at the beginning
+    if (history.length > 20) history.pop(); // Keep only last 20 entries
+
+    localStorage.setItem("calcHistory", JSON.stringify(history));
+}

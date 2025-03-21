@@ -41,8 +41,13 @@ function total() {
             return "(" + (parseFloat(num) / 100) + ")";
         });
 
-        input.value = eval(expression); 
+        let result = eval(expression); 
+        let calculation = `Expression: ${input.value}`; 
+        
+        input.value = result;
         resultDisplayed = true; 
+
+        saveToHistory(calculation, result);
 
     } catch {
         input.style.color = "red";
@@ -56,4 +61,14 @@ function total() {
         }, 1500);
         resultDisplayed = false;
     }
+}
+
+function saveToHistory(calculation, result) {
+    let history = JSON.parse(localStorage.getItem("calcHistory")) || [];
+    let entry = `${calculation} = ${result}`;
+
+    history.unshift(entry); // Add latest entry at the beginning
+    if (history.length > 20) history.pop(); // Keep only last 20 entries
+
+    localStorage.setItem("calcHistory", JSON.stringify(history));
 }

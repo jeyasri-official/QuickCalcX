@@ -31,11 +31,23 @@ function calculateBMI() {
 
     categoryElement.innerHTML = `Category : ${category}`
     categoryElement.style.color = "#030113";
-}
 
+    let calculation = `Weight: ${weight}kg, Height: ${height * 100}cm`;
+    saveToHistory(calculation, `BMI: ${bmi.toFixed(2)}, ${category}`);
+}
 
 document.getElementById("heightInput").addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         calculateBMI();
     }
 });
+
+function saveToHistory(calculation, result) {
+    let history = JSON.parse(localStorage.getItem("calcHistory")) || [];
+    let entry = `${calculation} = ${result}`;
+
+    history.unshift(entry); // Add latest entry at the beginning
+    if (history.length > 20) history.pop(); // Keep only last 20 entries
+
+    localStorage.setItem("calcHistory", JSON.stringify(history));
+}

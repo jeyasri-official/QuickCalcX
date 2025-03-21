@@ -1,0 +1,22 @@
+:root {
+    --bg: #030113;
+    --cbg: rgb(222, 220, 230);
+    --primary: rgb(67, 84, 141);
+    --btn: #80769c;
+    --btnhover: darkslategray;
+    --roboto: "Roboto", sans-serif;
+}
+
+
+.btn {
+    background-color: var(--btn);
+    font-size: 16px;
+    color : var(--cbg);
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+}
+
+.btn:hover{
+    background-color: var(--bg);
+    color : var(--cbg)
+}

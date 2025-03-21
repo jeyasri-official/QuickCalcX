@@ -14,6 +14,12 @@ function calculateFuelCost() {
     let totalCost = fuelNeeded * fuelPrice;
 
     resultElement.innerHTML = `Total Cost: ${totalCost.toFixed(2)}`;
+
+    let calculation = `Distance: ${distance} km, Efficiency: ${efficiency} km/l, Fuel Price: $${fuelPrice.toFixed(2)}`  
+    let totalAmount = `Total Cost: $${totalCost.toFixed(2)}`
+
+    saveToHistory(calculation, totalAmount);
+    
 }
 
 document.addEventListener("keydown", function(event) {
@@ -21,3 +27,13 @@ document.addEventListener("keydown", function(event) {
         calculateFuelCost();
     }
 });
+
+function saveToHistory(calculation, result) {
+    let history = JSON.parse(localStorage.getItem("calcHistory")) || [];
+    let entry = `${calculation} = ${result}`;
+
+    history.unshift(entry); // Add latest entry at the beginning
+    if (history.length > 20) history.pop(); // Keep only last 20 entries
+
+    localStorage.setItem("calcHistory", JSON.stringify(history));
+}

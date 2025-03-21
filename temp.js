@@ -41,6 +41,11 @@ function convertTemperature() {
     }
     
     resultElement.innerHTML = `Result: ${convertedTemp.toFixed(2)} ${toUnit}`;
+
+    let userTempInput = `${tempInput} ${fromUnit}`
+    let calculation = `${convertedTemp.toFixed(2)} ${toUnit}`
+    saveToHistory(userTempInput,calculation);
+    
 }
 
 // Allow pressing "Enter" to trigger conversion
@@ -49,3 +54,14 @@ document.getElementById("tempInput").addEventListener("keydown", function(event)
         convertTemperature();
     }
 });
+
+
+function saveToHistory(calculation, result) {
+    let history = JSON.parse(localStorage.getItem("calcHistory")) || [];
+    let entry = `${calculation} = ${result}`;
+
+    history.unshift(entry); // Add latest entry at the beginning
+    if (history.length > 20) history.pop(); // Keep only last 20 entries
+
+    localStorage.setItem("calcHistory", JSON.stringify(history));
+}

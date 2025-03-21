@@ -28,6 +28,10 @@ function convertSpeed() {
     let convertedSpeed = speedInMs / conversionFactors[toUnit];
 
     resultElement.innerHTML = `Result : ${convertedSpeed.toFixed(4)} ${toUnit}`;
+
+    let userSpeedInput = `${speedInput} ${fromUnit}`
+    let calculation = `${convertedSpeed.toFixed(4)} ${toUnit}`
+    saveToHistory(userSpeedInput,calculation);
 }
 
 document.getElementById("speedInput").addEventListener("keydown", function(event) {
@@ -35,3 +39,14 @@ document.getElementById("speedInput").addEventListener("keydown", function(event
         convertSpeed();
     }
 });
+
+
+function saveToHistory(calculation, result) {
+    let history = JSON.parse(localStorage.getItem("calcHistory")) || [];
+    let entry = `${calculation} = ${result}`;
+
+    history.unshift(entry); // Add latest entry at the beginning
+    if (history.length > 20) history.pop(); // Keep only last 20 entries
+
+    localStorage.setItem("calcHistory", JSON.stringify(history));
+}

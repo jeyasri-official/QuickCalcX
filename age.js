@@ -14,7 +14,7 @@ function calculateAge() {
     if (dob > today) {
         resultElement.innerHTML = "Invalid! Future date not allowed";
         resultElement.style.color = "red";
-        resultElement.style.fontSize = "22px"
+        resultElement.style.fontSize = "22px";
         return;
     }
 
@@ -33,7 +33,11 @@ function calculateAge() {
         ageMonths += 12;
     }
 
-    resultElement.innerHTML = `${ageYears} Years, ${ageMonths} Months, ${ageDays} Days`;
+    let resultText = `${ageYears} Years, ${ageMonths} Months, ${ageDays} Days`;
+    resultElement.innerHTML = resultText;
+
+    let calculation = `DOB: ${dobInput}`;
+    saveToHistory(calculation, resultText);
 }
 
 document.getElementById("dobInput").addEventListener("keydown", function(event) {
@@ -41,3 +45,13 @@ document.getElementById("dobInput").addEventListener("keydown", function(event) 
         calculateAge();
     }
 });
+
+function saveToHistory(calculation, result) {
+    let history = JSON.parse(localStorage.getItem("calcHistory")) || [];
+    let entry = `${calculation} = ${result}`;
+
+    history.unshift(entry); // Add latest entry at the beginning
+    if (history.length > 20) history.pop(); // Keep only last 20 entries
+
+    localStorage.setItem("calcHistory", JSON.stringify(history)); 
+}
