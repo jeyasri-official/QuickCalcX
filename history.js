@@ -26,3 +26,8 @@ function clearHistory() {
 
 // Load history when the page opens
 loadHistory();
+
+document.addEventListener("DOMContentLoaded", function () {
+    let lastPage = localStorage.getItem("lastOpenedFile") || "index.html"; // Default to home if no last page
+    document.getElementById("goBackBtn").setAttribute("href", lastPage);
+});

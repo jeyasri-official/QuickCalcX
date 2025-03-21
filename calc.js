@@ -72,3 +72,5 @@ function saveToHistory(calculation, result) {
 
     localStorage.setItem("calcHistory", JSON.stringify(history));
 }
+
+localStorage.setItem("lastOpenedFile", window.location.pathname);
