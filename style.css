@@ -145,8 +145,8 @@ p.end{
 
 .mobile-dropdown a {
     display: block;
-    padding: 10px;
     color: var(--cbg);
+    text-align: center;
 }
 
 .mobile-dropdown a:hover {
@@ -173,7 +173,7 @@ p.end{
 
 @media (width <= 460px) {
     .container {
-        min-width: 400px;
+        max-width: 400px;
         margin-top: 0;
         margin-bottom: 0;
     }
