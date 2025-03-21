@@ -3,6 +3,10 @@ function convertLength() {
     let fromUnit = document.getElementById("fromUnit").value;
     let toUnit = document.getElementById("toUnit").value;
 
+    console.log(`Input value: ${input}`);
+    console.log(`From unit: ${fromUnit}`);
+    console.log(`To unit: ${toUnit}`);
+
     if (isNaN(input)) {
         let resultElement = document.getElementById("result");
         resultElement.innerText = "Please enter a valid Number";
@@ -21,6 +25,14 @@ function convertLength() {
         yard: 1.09361
     };
 
+    // Check if units exist in conversionRates object
+    if (!(fromUnit in conversionRates) || !(toUnit in conversionRates)) {
+        let resultElement = document.getElementById("result");
+        resultElement.innerText = "Invalid units selected";
+        resultElement.style.color = "red"; 
+        return;
+    }
+
     // Convert input to meters first
     let inputInMeters = input / conversionRates[fromUnit];
 
@@ -35,14 +47,14 @@ function convertLength() {
 }
 
 function saveToHistory(calculation, result) {
-    let history = JSON.parse(localStorage.getItem("calcHistory")) || [];
-    let entry = `${calculation} = ${result}`;
-
-    history.unshift(entry); // Add latest entry at the beginning
-    if (history.length > 20) history.pop(); // Keep only last 20 entries
-
-    localStorage.setItem("calcHistory", JSON.stringify(history));
-}
-
-localStorage.setItem("lastOpenedFile", window.location.pathname);
-
+        let history = JSON.parse(localStorage.getItem("calcHistory")) || [];
+        let entry = `${calculation} = ${result}`;
+    
+        history.unshift(entry); // Add latest entry at the beginning
+        if (history.length > 20) history.pop(); // Keep only last 20 entries
+    
+        localStorage.setItem("calcHistory", JSON.stringify(history));
+    }
+    
+    localStorage.setItem("lastOpenedFile", window.location.pathname);
+    
