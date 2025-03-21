@@ -1,0 +1,20 @@
+:root {
+    --bg: #030113;
+    --cbg: rgb(222, 220, 230);
+    --primary: rgb(67, 84, 141);
+    --btn: #80769c;
+    --btnhover: darkslategray;
+    --roboto: "Roboto", sans-serif;
+}
+
+.menu{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color : var(--cbg);
+}
+
+.home p {
+    color : var(--bg);
+    font-size: 1.3rem;
+    margin-top: 25px;
+}
