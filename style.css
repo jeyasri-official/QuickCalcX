@@ -29,6 +29,11 @@ body {
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
 }
 
+.homePage > li > a{
+    text-decoration: none;
+    color: var(--cbg)
+}
+
 .home h1, .about h1,.contact h1 {
     font-size: 2.1rem;
     color: var(--primary);
@@ -71,6 +76,7 @@ body {
 .aboutContent{
     text-align: justify;
 }
+
 
 p.end{
     color: var(--primary);
